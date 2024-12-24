@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftUISnackbar
 
 @main
 struct TodoAppApp: App {
+    @StateObject private var localStorage = LocalStorage();
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePage().environmentObject(localStorage).environmentObject(SnackbarStore())
         }
     }
 }

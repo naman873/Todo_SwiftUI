@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		520980AE2D1827E8007E9B7D /* TodoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520980AD2D1827E8007E9B7D /* TodoAppApp.swift */; };
-		520980B02D1827E8007E9B7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520980AF2D1827E8007E9B7D /* ContentView.swift */; };
+		520980B02D1827E8007E9B7D /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520980AF2D1827E8007E9B7D /* HomePage.swift */; };
 		520980B22D1827E9007E9B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520980B12D1827E9007E9B7D /* Assets.xcassets */; };
 		520980B52D1827E9007E9B7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520980B42D1827E9007E9B7D /* Preview Assets.xcassets */; };
+		520980BC2D183985007E9B7D /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520980BB2D183985007E9B7D /* AddTask.swift */; };
+		5264B60A2D19C88F00F6E6FF /* SwiftUISnackbar in Frameworks */ = {isa = PBXBuildFile; productRef = 5264B6092D19C88F00F6E6FF /* SwiftUISnackbar */; };
+		5277BEA42D1971A200129A67 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277BEA32D1971A200129A67 /* LocalStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		520980AA2D1827E8007E9B7D /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		520980AD2D1827E8007E9B7D /* TodoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppApp.swift; sourceTree = "<group>"; };
-		520980AF2D1827E8007E9B7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		520980AF2D1827E8007E9B7D /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		520980B12D1827E9007E9B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		520980B42D1827E9007E9B7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		520980BB2D183985007E9B7D /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
+		5277BEA32D1971A200129A67 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5264B60A2D19C88F00F6E6FF /* SwiftUISnackbar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				520980AD2D1827E8007E9B7D /* TodoAppApp.swift */,
-				520980AF2D1827E8007E9B7D /* ContentView.swift */,
+				520980AF2D1827E8007E9B7D /* HomePage.swift */,
+				520980BB2D183985007E9B7D /* AddTask.swift */,
+				5277BEA32D1971A200129A67 /* LocalStorage.swift */,
 				520980B12D1827E9007E9B7D /* Assets.xcassets */,
 				520980B32D1827E9007E9B7D /* Preview Content */,
 			);
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = TodoApp;
+			packageProductDependencies = (
+				5264B6092D19C88F00F6E6FF /* SwiftUISnackbar */,
+			);
 			productName = TodoApp;
 			productReference = 520980AA2D1827E8007E9B7D /* TodoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 520980A12D1827E8007E9B7D;
+			packageReferences = (
+				5264B6082D19C88F00F6E6FF /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */,
+			);
 			productRefGroup = 520980AB2D1827E8007E9B7D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				520980B02D1827E8007E9B7D /* ContentView.swift in Sources */,
+				520980B02D1827E8007E9B7D /* HomePage.swift in Sources */,
+				5277BEA42D1971A200129A67 /* LocalStorage.swift in Sources */,
 				520980AE2D1827E8007E9B7D /* TodoAppApp.swift in Sources */,
+				520980BC2D183985007E9B7D /* AddTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +303,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,6 +335,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5264B6082D19C88F00F6E6FF /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zaniluca/SwiftUISnackbar";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5264B6092D19C88F00F6E6FF /* SwiftUISnackbar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5264B6082D19C88F00F6E6FF /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */;
+			productName = SwiftUISnackbar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 520980A22D1827E8007E9B7D /* Project object */;
 }
